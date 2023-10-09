@@ -14,8 +14,8 @@ return require('packer').startup(function(use)
 	}
 
 	use ({ 
-		"catppuccin/nvim", 
-		as = "catppuccin", 
+		"catppuccin/nvim",
+		as = "catppuccin",
 		config = function()
 			vim.cmd('colorscheme catppuccin-mocha')
 		end
@@ -26,7 +26,41 @@ return require('packer').startup(function(use)
 	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
-
+    use({
+        'akinsho/bufferline.nvim',
+        requires = {
+            {'kyazdani42/nvim-web-devicons'},
+        },
+    })
+    use({
+        'nvim-lualine/lualine.nvim',
+        require = {
+            {'kyazdani42/nvim-web-devicons'},
+        },
+    })
+    use {
+        'utilyre/barbecue.nvim',
+        requires = {
+            'SmiteshP/nvim-navic',
+        },
+    }
+    use('nvim-tree/nvim-tree.lua')
+    use('petertriho/nvim-scrollbar')
+    use('norcalli/nvim-colorizer.lua')
+    use('goolord/alpha-nvim')
+    use {
+        'anuvyklack/windows.nvim',
+        requires = {
+            'anuvyklack/middleclass',
+            'anuvyklack/animation.nvim',
+        },
+        config = function()
+            vim.o.winwidth = 10
+            vim.o.winminwidth = 10
+            vim.o.equalalways = false
+            require('windows').setup()
+        end
+    }
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
