@@ -7,9 +7,9 @@ return {
         opts = function()
             return {
                 transparent = false
-            },
+            }
         end,
-        config = function()        
+        config = function()
             vim.g.material_style = "deep ocean"
             vim.cmd.colorscheme "material"
         end,

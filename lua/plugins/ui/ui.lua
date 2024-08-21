@@ -10,9 +10,6 @@ return {
         config = function()
             require("config.plugins.ui.noice")
         end,
-        -- opts = {
-        --
-        -- },
     },
     -- windows
     {

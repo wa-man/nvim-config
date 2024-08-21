@@ -42,6 +42,12 @@ return {
         end
     },
     -- -- toggleterm
+    {
+        "akinsho/toggleterm.nvim",
+        config = function()
+            require("config.plugins.toggleterm")
+        end
+    },
     -- -- vimbegood
     {
         "ThePrimeagen/vim-be-good",

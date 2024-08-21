@@ -7,6 +7,7 @@ require("noice").setup({
         },
     },
     presets = {
+        inc_rename = true,
         bottom_search = false,
         command_palette = true,
         long_message_to_split = true,
